@@ -5,7 +5,7 @@ app.get("/search",(req,res)=>{
 
     const query = req.query.q
 
-    eval("console.log('" + query + "')")
+    console.log(query)
 
     res.send("Search completed")
 
