@@ -11,8 +11,8 @@ def user():
     conn = sqlite3.connect("users.db")
     cursor = conn.cursor()
 
-    query = "SELECT * FROM users WHERE id=" + id
+    query = "SELECT * FROM users WHERE id=?"
 
-    cursor.execute(query)
+    cursor.execute(query, (id,))
 
     return "User fetched"
